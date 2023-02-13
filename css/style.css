@@ -226,6 +226,16 @@ body {
   gap: 24px;
 }
 
+.decoration {
+  width: 264px;
+  height: 112px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cloud);
+  border-radius: 4px;
+}
+
 .feature-item {
   width: 264px;
 }
@@ -243,10 +253,6 @@ body {
   font-size: var(--fontsize);
   line-height: var(--height);
   letter-spacing: 0.02em;
-}
-
-.feature-icon {
-  margin: 24px 100px;
 }
 
 /* -----------------galery----------------- */
@@ -279,6 +285,7 @@ body {
 .team {
   padding-top: 120px;
   padding-bottom: 120px;
+  background-color: var(--cloud);
 }
 
 .team-title {
@@ -359,7 +366,8 @@ body {
 /* ------------------customers---------------- */
 
 .customers {
-  padding-bottom: 168px;
+  padding-top: 130px;
+  padding-bottom: 120px;
 }
 
 .customers-title {
