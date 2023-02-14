@@ -229,6 +229,7 @@ body {
 .decoration {
   width: 264px;
   height: 112px;
+  margin-bottom: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -336,6 +337,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 24px;
+  background-color: #ffffff;
 }
 
 .team-soc-item {
@@ -519,7 +521,7 @@ body {
   font-size: var(--fontsize);
   line-height: var(--height);
   letter-spacing: 0.04em;
-  color: var(--iris);
+  color: var(--ocean);
   padding: 12px 24px;
   border: 1px solid #e7e9fc;
   border-radius: 4px;
@@ -548,16 +550,12 @@ body {
 
 .portfolio-item {
   width: calc(100%-48px) / 3;
+  background: #ffffff;
 }
 
 .portfolio-link {
   display: block;
   text-decoration: none;
-}
-
-.portfolio-link:is(:hover, :focus) {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-img {
@@ -585,4 +583,12 @@ body {
   border-bottom: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-link:is(:hover, :focus) > .about-list {
+  border-right: 1px solid #f4f4fd;
+  border-bottom: 1px solid #f4f4fd;
+  border-left: 1px solid #f4f4fd;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
