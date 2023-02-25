@@ -216,7 +216,12 @@ body {
 .hero-btn {
   width: 169px;
   height: 56px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: var(--transition);
+  letter-spacing: 0.04em;
   background: var(--iris);
+  color: #ffffff;
   border-radius: 4px;
   display: block;
   margin-left: auto;
@@ -521,6 +526,59 @@ body {
   fill: var(--cloud);
 }
 
+.subscripe {
+  margin-left: auto;
+}
+.subscribe-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+.subscripe-wrap {
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.subscripe-input {
+  width: 264px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  transition: border-color var(--transition);
+}
+
+.subscripe-input:focus {
+  border-color: #4d5ae5;
+}
+
+.subscripe-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscripe-btn {
+  width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.subscripe-icon {
+  fill: #ffffff;
+}
+
 /* -----------------------------------
 ----------PAGE-PORTFOLIO-------------
 -------------------------------------- */
@@ -670,6 +728,7 @@ body {
   transform: translate(-50%, -50%) scale(1) rotate(0);
   width: 408px;
   min-height: 576px;
+  padding: 24px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -694,7 +753,7 @@ body {
   background: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  transition: background-color var(--transition);
+  transition: background-color, fill var(--transition);
 }
 
 .modal-close-btn:is(:hover, :focus) {
@@ -706,4 +765,128 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: var(--height);
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin: 48px 0 16px 0;
+  color: var(--navyblue);
+}
+
+.modal-input {
+  width: 360px;
+  height: 40px;
+  padding-left: 38px;
+  outline: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: border-color var(--transition);
+}
+
+.modal-input:focus {
+  border-color: #4d5ae5;
+}
+
+.modal-input:focus + .modal-icon {
+  fill: var(--iris);
+}
+
+.modal-coment {
+  width: 360px;
+  min-height: 120px;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  outline: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--transition);
+  resize: none;
+}
+
+.modal-coment:focus {
+  border-color: #4d5ae5;
+}
+
+.modal-coment::placeholder {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.modal-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  fill: var(--navyblue);
+  transform: translateY(-50%);
+  transition: fill var(--transition);
+}
+
+.input-text,
+.user-text {
+  display: block;
+  padding-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #8e8f99;
+}
+
+.modal-field {
+  position: relative;
+  display: flex;
+  gap: 8px;
+}
+
+.check-text {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-text .check-icon-wrap {
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  transition: border, fill, background-color var(--transition);
+}
+
+.input-check:checked + .check-text .check-icon-wrap {
+  border: none;
+  background-color: var(--ocean);
+  fill: var(--cloud);
+}
+
+.check-link {
+  color: var(--iris);
+}
+
+.button-send-data {
+  margin-top: 24px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
