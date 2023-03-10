@@ -51,6 +51,11 @@
 
   /* -------------FEATURE------------------ */
 
+  .feature {
+    padding-top: 120px;
+    padding-bottom: 0px;
+  }
+
   .decoration {
     width: 264px;
     height: 112px;

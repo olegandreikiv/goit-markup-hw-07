@@ -148,7 +148,8 @@
     gap: 24px;
   }
 
-  .subscribe-title {
+  .subscribe-title,
+  .social-text {
     text-align: left;
   }
 
