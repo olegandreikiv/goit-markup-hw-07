@@ -19,6 +19,9 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
   </head>
 
   <body>
@@ -56,10 +59,87 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="mobile-menu" data-menu-open="">
+          <svg class="mobile-menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-open"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu-wrap is-hidden" data-menu>
+        <div>
+          <button type="button" class="mobile-close-btn" data-menu-close>
+            <svg class="modal-close-btn-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu-nav">
+            <ul class="mobile-menu-list list">
+              <li class="mobile-menu-item">
+                <a href="./index.html" class="mobile-menu-link link active"
+                  >Studio</a
+                >
+              </li>
+              <li class="mobile-menu-item">
+                <a href="./portfolio.html" class="mobile-menu-link link"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="mobile-menu-item">
+                <a href="" class="mobile-menu-link link">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mobile-menu-contacts">
+          <ul class="mobile-menu-contacts-list list">
+            <li>
+              <a href="tel:+110001111111" class="mobile-menu-phone link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li>
+              <a href="mailto:info@devstudio.com" class="mobile-menu-mail link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-soc-list list">
+            <li class="mobile-soc-item">
+              <a href="" class="mobile-soc-link link">
+                <svg class="mobile-soc-icon">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-soc-item">
+              <a href="" class="mobile-soc-link link">
+                <svg class="mobile-soc-icon">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-soc-item">
+              <a href="" class="mobile-soc-link link">
+                <svg class="mobile-soc-icon">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-soc-item">
+              <a href="" class="mobile-soc-link link">
+                <svg class="mobile-soc-icon">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
+
     <main>
       <!-- Section 1 -->
+
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
@@ -134,11 +214,28 @@
           <h2 class="galery-title">What are we doing</h2>
           <ul class="galery-list list">
             <li class="galery-item">
-              <img src="./images/leaning.jpg" alt="learning" width="360" />
+              <img
+                srcset="./images/wedoing1.jpg 1x, ./images/wedoing1-2x.jpg 2x"
+                src="./images/wedoing1.jpg"
+                alt="learning"
+                width="360"
+              />
             </li>
-            <li><img src="./images/talk.jpg" alt="talk" width="360" /></li>
+            <li>
+              <img
+                srcset="./images/wedoing2.jpg 1x, ./images/wedoing2-2x.jpg 2x"
+                src="./images/wedoing2.jpg"
+                alt="talk"
+                width="360"
+              />
+            </li>
             <li class="galery-item">
-              <img src="./images/recommendet.jpg" alt="recommend" width="360" />
+              <img
+                srcset="./images/wedoing3.jpg 1x, ./images/wedoing3-2x.jpg 2x"
+                src="./images/wedoing3.jpg"
+                alt="recommend"
+                width="360"
+              />
             </li>
           </ul>
         </div>
@@ -152,6 +249,7 @@
           <ul class="team-list list">
             <li class="team-item">
               <img
+                srcset="./images/mark.jpg 1x, ./images/mark-2x.jpg 2x"
                 src="./images/mark.jpg"
                 alt="Mark Guerrero Product Designer"
                 width="264"
@@ -193,6 +291,7 @@
             </li>
             <li class="team-item">
               <img
+                srcset="./images/tom.jpg 1x, ./images/tom-2x.jpg 2x"
                 src="./images/tom.jpg"
                 alt="Tom Ford Frontend Developer"
                 width="264"
@@ -234,6 +333,7 @@
             </li>
             <li class="team-item">
               <img
+                srcset="./images/camila.jpg 1x, ./images/camila-2x.jpg 2x"
                 src="images/camila.jpg"
                 alt="Camila Garcia Marketing"
                 width="264"
@@ -275,6 +375,7 @@
             </li>
             <li class="team-item">
               <img
+                srcset="./images/daniel.jpg 1x, ./images/daniel-2x.jpg 2x"
                 src="./images/daniel.jpg"
                 alt="Daniel Wilson UI Designer"
                 width="264"
@@ -372,7 +473,7 @@
     <!-- footer -->
 
     <footer class="footer">
-      <div class="footer-container">
+      <div class="footer-container container">
         <div class="about">
           <a class="footer-link link" href="./index.html"
             ><span class="logo-web">WEB</span>STUDIO</a
@@ -437,6 +538,9 @@
         </form>
       </div>
     </footer>
+
+    <!-- -----------Modal form--------------- -->
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
@@ -509,5 +613,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

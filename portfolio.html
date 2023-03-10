@@ -19,6 +19,9 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
   </head>
 
   <body>
@@ -58,6 +61,81 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="mobile-menu" data-menu-open="">
+          <svg class="mobile-menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-open"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu-wrap is-hidden" data-menu>
+        <button type="button" class="mobile-close-btn" data-menu-close>
+          <svg class="modal-close-btn-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu-nav">
+          <div>
+            <ul class="mobile-menu-list list">
+              <li class="mobile-menu-item">
+                <a href="./index.html" class="mobile-menu-link link">Studio</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a href="./portfolio.html" class="mobile-menu-link link active"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="mobile-menu-item">
+                <a href="" class="mobile-menu-link link">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-menu-contacts">
+            <ul class="mobile-menu-contacts-list list">
+              <li>
+                <a href="tel:+110001111111" class="mobile-menu-phone link"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-menu-mail link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-soc-list list">
+              <li class="mobile-soc-item">
+                <a href="" class="mobile-soc-link link">
+                  <svg class="mobile-soc-icon">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-soc-item">
+                <a href="" class="mobile-soc-link link">
+                  <svg class="mobile-soc-icon">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-soc-item">
+                <a href="" class="mobile-soc-link link">
+                  <svg class="mobile-soc-icon">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-soc-item">
+                <a href="" class="mobile-soc-link link">
+                  <svg class="mobile-soc-icon">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -94,11 +172,34 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-cover-wrap">
-                  <img
-                    src="./images/bankingapp.jpg"
-                    alt="Banking App Interface Concept"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-desktop1.jpg    1x,
+                        ./images/portfolio-desktop1-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-tablet1.jpg    1x,
+                        ./images/portfolio-tablet1-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-mobile1.jpg    1x,
+                        ./images/portfolio-mobile1-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio-mobile1.jpg"
+                      alt="Banking App Interface Concept"
+                      width="396"
+                    />
+                  </picture>
                   <div class="cover-text-position">
                     <p class="portfolio-cover-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -118,11 +219,34 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-cover-wrap">
-                  <img
-                    src="./images/cashless.jpg"
-                    alt="Cashless Payment"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-desktop2.jpg    1x,
+                        ./images/portfolio-desktop2-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-tablet2.jpg    1x,
+                        ./images/portfolio-tablet2-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-mobile2.jpg    1x,
+                        ./images/portfolio-mobile2-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio-mobile2.jpg"
+                      alt="Banking App Interface Concept"
+                      width="396"
+                    />
+                  </picture>
                   <div class="cover-text-position">
                     <p class="portfolio-cover-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -140,11 +264,34 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-cover-wrap">
-                  <img
-                    src="./images/meditaion.jpg"
-                    alt="Meditaion App"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-desktop3.jpg    1x,
+                        ./images/portfolio-desktop3-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-tablet3.jpg    1x,
+                        ./images/portfolio-tablet3-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-mobile3.jpg    1x,
+                        ./images/portfolio-mobile3-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio-mobile3.jpg"
+                      alt="Banking App Interface Concept"
+                      width="396"
+                    />
+                  </picture>
                   <div class="cover-text-position">
                     <p class="portfolio-cover-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -162,11 +309,34 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-cover-wrap">
-                  <img
-                    src="./images/taxiserver.jpg"
-                    alt="Taxi Service"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-desktop4.jpg    1x,
+                        ./images/portfolio-desktop4-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-tablet4.jpg    1x,
+                        ./images/portfolio-tablet4-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-mobile4.jpg    1x,
+                        ./images/portfolio-mobile4-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio-mobile4.jpg"
+                      alt="Banking App Interface Concept"
+                      width="396"
+                    />
+                  </picture>
                   <div class="cover-text-position">
                     <p class="portfolio-cover-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -184,11 +354,34 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-cover-wrap">
-                  <img
-                    src="./images/screenilustration.jpg"
-                    alt="Screen Illustrations"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-desktop5.jpg    1x,
+                        ./images/portfolio-desktop5-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-tablet5.jpg    1x,
+                        ./images/portfolio-tablet5-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-mobile5.jpg    1x,
+                        ./images/portfolio-mobile5-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio-mobile5.jpg"
+                      alt="Banking App Interface Concept"
+                      width="396"
+                    />
+                  </picture>
                   <div class="cover-text-position">
                     <p class="portfolio-cover-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -206,11 +399,34 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-cover-wrap">
-                  <img
-                    src="./images/onlinecourses.jpg"
-                    alt="Online Courses"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-desktop6.jpg    1x,
+                        ./images/portfolio-desktop6-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-tablet6.jpg    1x,
+                        ./images/portfolio-tablet6-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-mobile6.jpg    1x,
+                        ./images/portfolio-mobile6-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio-mobile6.jpg"
+                      alt="Banking App Interface Concept"
+                      width="396"
+                    />
+                  </picture>
                   <div class="cover-text-position">
                     <p class="portfolio-cover-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -228,11 +444,34 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-cover-wrap">
-                  <img
-                    src="./images/instagramstoriesconcept.jpg"
-                    alt="Instagram Stories Concept"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-desktop7.jpg    1x,
+                        ./images/portfolio-desktop7-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-tablet7.jpg    1x,
+                        ./images/portfolio-tablet7-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-mobile7.jpg    1x,
+                        ./images/portfolio-mobile7-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio-mobile7.jpg"
+                      alt="Banking App Interface Concept"
+                      width="396"
+                    />
+                  </picture>
                   <div class="cover-text-position">
                     <p class="portfolio-cover-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -252,12 +491,34 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-cover-wrap">
-                  <img
-                    class="portfolio-img"
-                    src="./images/organicfood.jpg"
-                    alt="Organic Food"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-desktop8.jpg    1x,
+                        ./images/portfolio-desktop8-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-tablet8.jpg    1x,
+                        ./images/portfolio-tablet8-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-mobile8.jpg    1x,
+                        ./images/portfolio-mobile8-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio-mobile8.jpg"
+                      alt="Banking App Interface Concept"
+                      width="396"
+                    />
+                  </picture>
                   <div class="cover-text-position">
                     <p class="portfolio-cover-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -275,11 +536,34 @@
             <li class="portfolio-item">
               <a href="" class="portfolio-link">
                 <div class="portfolio-cover-wrap">
-                  <img
-                    src="./images/freshcoffee.jpg"
-                    alt="Fresh Coffee"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-desktop9.jpg    1x,
+                        ./images/portfolio-desktop9-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-tablet9.jpg    1x,
+                        ./images/portfolio-tablet9-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-mobile9.jpg    1x,
+                        ./images/portfolio-mobile9-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio-mobile9.jpg"
+                      alt="Banking App Interface Concept"
+                      width="396"
+                    />
+                  </picture>
                   <div class="cover-text-position">
                     <p class="portfolio-cover-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -302,7 +586,7 @@
     <!-- footer -->
 
     <footer class="footer">
-      <div class="footer-container">
+      <div class="footer-container container">
         <div class="about">
           <a class="footer-link link" href="./index.html"
             ><span class="logo-web">WEB</span>STUDIO</a
@@ -354,9 +638,10 @@
                 class="subscripe-input"
                 name="subscripe"
                 placeholder="E-mail"
+                required
               />
             </label>
-            <button class="subscripe-btn hero-btn">
+            <button class="subscripe-btn hero-btn" type="submit">
               Subscribe
               <svg class="subscripe-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-frame"></use>
@@ -366,5 +651,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

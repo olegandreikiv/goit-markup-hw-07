@@ -1,0 +1,26 @@
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 428px;
+  }
+  .hero-title {
+    font-size: 35px;
+  }
+
+  .modal {
+    width: 392px;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1) rotate(0);
+  }
+
+  .modal-title {
+    font-size: var(--fontsize);
+  }
+
+  .modal-input {
+    width: 100%;
+  }
+
+  .modal-coment {
+    width: 100%;
+  }
+}
